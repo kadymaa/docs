@@ -1,0 +1,566 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../dhcp/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>👾 Installation d’une solution LAMP - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mise-en-place-dune-solution-lamp" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              👾 Installation d’une solution LAMP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐰 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💻 Installation d’une debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dhcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔧 Configuration d’un DHCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👾 Installation d’une solution LAMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mise-en-place-dune-solution-lamp">Mise en place d’une solution LAMP</h1>
+<p>L’objectif de ce document est de présenter l’installation et la configuration d’une solution LAMP (<code>Linux, Apache, MariaDB, PHP</code>) sur un système Debian <code>12</code> ou <code>13</code>.</p>
+<p>Cette architecture permet d’<strong>héberger des applications web dynamiques</strong> reposant sur une <strong>base de données</strong>.</p>
+<ol>
+<li>
+<p>Prérequis</p>
+</li>
+<li>
+<p>Système d’exploitation : Debian 12 ou Debian 13</p>
+</li>
+<li>Accès administrateur (root ou sudo)</li>
+<li>
+<p>Connexion réseau fonctionnelle</p>
+</li>
+<li>
+<p>Présentation de LAMP</p>
+</li>
+</ol>
+<p>L = Linux
+A = Apache
+M = MariaDB
+P = PHP</p>
+<ol>
+<li>Installation d'Apache (A)</li>
+</ol>
+<p>3.1 Installation</p>
+<pre><code class="language-bash">apt update
+apt install apache2 -y
+</code></pre>
+<p>3.2 Démarrage et activation</p>
+<pre><code>systemctl start apache2
+systemctl enable apache2
+systemctl status apache2
+</code></pre>
+<p>3.3 Vérification</p>
+<p>Ouvrir un navigateur et accéder à : </p>
+<pre><code>http://localhost
+</code></pre>
+<p>La page par défaut d’Apache doit s’afficher.</p>
+<ol>
+<li>Installation de MariaDB (M)</li>
+</ol>
+<p>4.1 Fonctionnement de MariaDB</p>
+<p>MariaDB est un système de gestion de base de données relationnelle.</p>
+<p>Il permet de stocker les données dans des tables et d’effectuer des requêtes telles que :</p>
+<pre><code>SELECT (lecture)
+INSERT (ajout)
+UPDATE (modification)
+DELETE (suppression)
+</code></pre>
+<p>PHP communique avec MariaDB afin d’afficher ou modifier les données sur les pages web.</p>
+<p>4.2 Installation</p>
+<pre><code>apt install mariadb-server -y
+</code></pre>
+<p>4.3 Vérification du service</p>
+<pre><code>systemctl status mariadb
+</code></pre>
+<p>4.4 Sécurisation de MariaDB</p>
+<pre><code>mariadb-secure-installation
+</code></pre>
+<p>4.5 Accès à MariaDB</p>
+<pre><code>mariadb
+</code></pre>
+<p>4.6 Commandes principales MariaDB</p>
+<pre><code>SHOW DATABASES;
+</code></pre>
+<p>Affiche les bases existantes</p>
+<pre><code>USE nom_de_la_base;
+</code></pre>
+<p>Sélectionne une base</p>
+<pre><code>SHOW TABLES;
+</code></pre>
+<p>Affiche les tables</p>
+<pre><code>DESCRIBE nom_table;
+</code></pre>
+<p>Affiche la structure d’une table</p>
+<pre><code>CREATE DATABASE nom;
+</code></pre>
+<p>Crée une base de données</p>
+<pre><code>CREATE TABLE nom (compte INT);
+</code></pre>
+<p>Crée une table</p>
+<pre><code>INSERT INTO nom (compte) VALUES (1);
+</code></pre>
+<p>Ajoute une donnée</p>
+<pre><code>EXIT;
+</code></pre>
+<p>Quitte MariaDB</p>
+<ol>
+<li>Création de la base GSB</li>
+</ol>
+<pre><code>CREATE DATABASE gsb_valide;
+</code></pre>
+<p>5.1 Création de l’utilisateur</p>
+<pre><code>CREATE USER 'userGsb'@'localhost' IDENTIFIED BY 'secret';
+</code></pre>
+<p>5.2 Attribution des droits</p>
+<pre><code>GRANT ALL PRIVILEGES ON gsb_valide.* TO 'userGsb'@'localhost';
+FLUSH PRIVILEGES;
+</code></pre>
+<p>5.3 Import d’un fichier SQL</p>
+<pre><code>mysql gsb_valide &lt; nom_fichier.sql
+</code></pre>
+<ol>
+<li>Installation de PHP (P)</li>
+</ol>
+<p>6.1 Installation</p>
+<pre><code>apt install php php-cgi php-mysqli php-pear php-mbstring \
+libapache2-mod-php php-common php-phpseclib php-mysql -y
+</code></pre>
+<p>6.2 Redémarrage d’Apache</p>
+<pre><code>systemctl restart apache2
+</code></pre>
+<p>6.3 Test PHP</p>
+<p>Créer le fichier :</p>
+<pre><code>nano /var/www/html/info.php
+</code></pre>
+<p>Contenu :</p>
+<pre><code>&lt;?php
+phpinfo();
+?&gt;
+</code></pre>
+<p>Accès navigateur :</p>
+<pre><code>http://localhost/info.php
+</code></pre>
+<ol>
+<li>Installation de phpMyAdmin</li>
+</ol>
+<p>7.1 Installation</p>
+<pre><code>apt install phpmyadmin -y
+</code></pre>
+<p>Choix :
+Serveur web : <code>apache2</code></p>
+<p>Configuration base de données : <code>Oui</code></p>
+<p>7.2 Activation si nécessaire</p>
+<pre><code>ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+</code></pre>
+<pre><code>systemctl restart apache2
+</code></pre>
+<p>7.3 Accès à phpMyAdmin</p>
+<pre><code>http://localhost/phpmyadmin
+</code></pre>
+<p>Identifiants :</p>
+<p>Utilisateur : <code>userGsb</code>
+Mot de passe : <code>secret</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
