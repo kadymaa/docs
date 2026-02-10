@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../debian/">
+        <link rel="prev" href="../switch/">
       
-      
-        <link rel="next" href="../lamp/">
       
       
         
@@ -23,7 +21,7 @@
     
     
       
-        <title>🔧 Configuration d’un DHCP - Docs</title>
+        <title>🐳 Les commandes Docker - Docs</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration-dun-dhcp" class="md-skip">
+        <a href="#mise-en-place-dun-systeme-de-conteneurisation" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🔧 Configuration d’un DHCP
+              🐳 Les commandes Docker
             
           </span>
         </div>
@@ -269,37 +267,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🔧 Configuration d’un DHCP
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dhcp/" class="md-nav__link">
         
   
   
@@ -315,103 +286,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-cest-quoi-le-dhcp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. C’est quoi le DHCP
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-prerequis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Prérequis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-configuration-dune-ip-fixe" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Configuration d'une IP fixe
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-configuration-du-dhcp-creation-dun-pool" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Configuration du DHCP (création d'un pool)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-configuration-de-linterface-reseau" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Configuration de l'interface réseau
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-lancement-et-verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Lancement et vérification
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -474,10 +348,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐳 Les commandes Docker
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -493,6 +394,142 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-gestion-des-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gestion des images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lancement-de-conteneurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lancement de conteneurs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gestion-des-conteneurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Gestion des conteneurs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-informations-et-statistiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Informations et statistiques
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-nettoyage-et-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Nettoyage et maintenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-volumes-et-persistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Volumes et persistance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-reseaux-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Réseaux Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-images-et-conteneurs-en-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Images et conteneurs en pratique
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Images et conteneurs en pratique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-une-image-a-partir-dun-conteneur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer une image à partir d’un conteneur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporter-importer-une-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporter / Importer une image
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -524,10 +561,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-cest-quoi-le-dhcp" class="md-nav__link">
+  <a href="#1-gestion-des-images" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. C’est quoi le DHCP
+        1. Gestion des images
       
     </span>
   </a>
@@ -535,10 +572,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-prerequis" class="md-nav__link">
+  <a href="#2-lancement-de-conteneurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Prérequis
+        2. Lancement de conteneurs
       
     </span>
   </a>
@@ -546,10 +583,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-configuration-dune-ip-fixe" class="md-nav__link">
+  <a href="#3-gestion-des-conteneurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Configuration d'une IP fixe
+        3. Gestion des conteneurs
       
     </span>
   </a>
@@ -557,10 +594,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-installation" class="md-nav__link">
+  <a href="#4-informations-et-statistiques" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Installation
+        4. Informations et statistiques
       
     </span>
   </a>
@@ -568,10 +605,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-configuration-du-dhcp-creation-dun-pool" class="md-nav__link">
+  <a href="#5-nettoyage-et-maintenance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Configuration du DHCP (création d'un pool)
+        5. Nettoyage et maintenance
       
     </span>
   </a>
@@ -579,10 +616,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-configuration-de-linterface-reseau" class="md-nav__link">
+  <a href="#6-volumes-et-persistance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Configuration de l'interface réseau
+        6. Volumes et persistance
       
     </span>
   </a>
@@ -590,13 +627,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-lancement-et-verification" class="md-nav__link">
+  <a href="#7-reseaux-docker" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Lancement et vérification
+        7. Réseaux Docker
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-images-et-conteneurs-en-pratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Images et conteneurs en pratique
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Images et conteneurs en pratique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-une-image-a-partir-dun-conteneur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer une image à partir d’un conteneur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporter-importer-une-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporter / Importer une image
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -617,146 +693,285 @@
 
 
 
-<h1 id="configuration-dun-dhcp">Configuration d’un DHCP</h1>
-<h2 id="1-cest-quoi-le-dhcp">1. C’est quoi le DHCP</h2>
-<p>Le DHCP (<strong>D</strong>ynamic <strong>H</strong>ost <strong>C</strong>onfiguration <strong>P</strong>rotocol) est un protocole réseau qui permet à un serveur de fournir automatiquement des adresses IP et d'autres informations de configuration aux appareils se connectant à un réseau.</p>
-<hr />
-<h2 id="2-prerequis">2. Prérequis</h2>
-<ul>
-<li>Avoir une machine <strong>DEBIAN-13</strong>.  </li>
-<li>Avoir une <strong>IP fixe</strong>.</li>
-</ul>
-<hr />
-<h2 id="3-configuration-dune-ip-fixe">3. Configuration d'une IP fixe</h2>
-<p>Pour configurer une IP fixe, édite le fichier de configuration réseau :  </p>
-<pre><code class="language-yaml">nano /etc/network/interfaces
-</code></pre>
-<p>Puis mets la configuration suivante :</p>
-<pre><code class="language-yaml"># The loopback network interface
-auto lo
-iface lo inet loopback
-
-# The primary network interface
-allow-hotplug enp0s3
-#iface enp0s3 inet dhcp 
-iface enp0s3 inet static
- address IP_FIXE
- netmask LE_MASQUE
- gateway PASSERELLE
-</code></pre>
-<ul>
-<li><code>iface enp0s3 inet static</code> ➔ configure l’interface avec <strong>une IP fixe</strong>.</li>
-<li><code>address IP_FIXE</code> ➔ l’adresse IP fixe de la machine, <em>ex : 192.168.1.50</em>.</li>
-<li><code>netmask LE_MASQUE</code> ➔ masque de sous-réseau, <em>ex : 255.255.255.0</em>.</li>
-<li><code>gateway PASSERELLE</code> ➔ adresse IP de la passerelle par défaut (routeur), <em>ex : 192.168.1.1</em>.</li>
-</ul>
-<p>Cette configuration est nécessaire pour les serveurs ou services qui doivent avoir une adresse IP stable, comme un serveur DHCP, un serveur web ou une machine à atteindre sur le réseau local.</p>
-<hr />
-<h2 id="4-installation">4. Installation</h2>
-<pre><code class="language-yaml">apt update
-apt install isc-dhcp-server
-systemctl status isc-dhcp-server
-</code></pre>
-<p>➔ Les commandes <code>systemctl</code> :</p>
+<h1 id="mise-en-place-dun-systeme-de-conteneurisation">Mise en place d'un système de conteneurisation</h1>
+<h2 id="1-gestion-des-images">1. Gestion des images</h2>
 <table>
 <thead>
 <tr>
-<th>Commande</th>
-<th>Description</th>
+<th><strong>Commande</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Exemple</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>systemctl status &lt;service&gt;</code></td>
-<td>Affiche l'état actuel d'un service</td>
+<td><code>docker pull &lt;image&gt;</code></td>
+<td>Télécharge une image depuis Docker Hub</td>
+<td><code>docker pull ubuntu</code></td>
 </tr>
 <tr>
-<td><code>systemctl start &lt;service&gt;</code></td>
-<td>Démarre un service</td>
+<td><code>docker images</code></td>
+<td>Liste les images locales</td>
+<td><code>docker images</code></td>
 </tr>
 <tr>
-<td><code>systemctl stop &lt;service&gt;</code></td>
-<td>Arrête un service</td>
+<td><code>docker rmi &lt;image&gt;</code></td>
+<td>Supprime une image</td>
+<td><code>docker rmi ubuntu</code></td>
 </tr>
 <tr>
-<td><code>systemctl restart &lt;service&gt;</code></td>
-<td>Redémarre un service</td>
+<td><code>docker rmi -f &lt;image&gt;</code></td>
+<td>Supprime une image même utilisée</td>
+<td><code>docker rmi -f ubuntu</code></td>
 </tr>
 <tr>
-<td><code>systemctl reload &lt;service&gt;</code></td>
-<td>Recharge la configuration d’un service</td>
-</tr>
-<tr>
-<td><code>systemctl enable &lt;service&gt;</code></td>
-<td>Active le service au démarrage du système</td>
-</tr>
-<tr>
-<td><code>systemctl disable &lt;service&gt;</code></td>
-<td>Désactive le service au démarrage</td>
+<td><code>docker search &lt;mot&gt;</code></td>
+<td>Recherche une image sur Docker Hub</td>
+<td><code>docker search nginx</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="5-configuration-du-dhcp-creation-dun-pool">5. Configuration du DHCP (création d'un pool)</h2>
-<pre><code class="language-yaml">cd /etc/dhcp/
-ls -l
-cp dhcpd.conf dhcpd-copy.conf
-</code></pre>
-<p>⚠️ Il est fortement conseillé de faire une copie du fichier de configuration afin de pouvoir restaurer les valeurs par défaut en cas d’erreur.</p>
-<pre><code class="language-yaml">nano dhcpd.conf
-</code></pre>
-<p>Ajoute ou modifie les lignes suivantes :</p>
-<pre><code class="language-yaml">option domain-name &quot;myserver.local&quot;;
-option domain-name-servers 172.17.10.1,172.17.10.2;
-
-authoritative;
-</code></pre>
-<ul>
-<li>Les machines recevront myserver.local comme suffixe DNS.</li>
-<li><code>authoritative</code> signifie que ce serveur DHCP est la source officielle pour ce réseau.</li>
-<li>Les machines utiliseront les adresses IP <strong>172.17.10.1</strong> et <strong>172.17.10.2</strong> pour résoudre les noms de domaine.</li>
-</ul>
-<p>Puis ajoute la configuration du subnet :</p>
-<pre><code class="language-yaml">subnet 192.168.1.0 netmask 255.255.255.0 {
-    range 192.168.1.100 192.168.1.200;
-    option routers 192.168.1.1;
-}
-</code></pre>
-<p>Explications :</p>
-<pre><code class="language-yaml">subnet 192.168.1.0 netmask 255.255.255.0
-</code></pre>
-<ul>
-<li>Définit le réseau local que le serveur DHCP va gérer.</li>
-<li><strong>192.168.1.0</strong> : adresse du réseau.</li>
-<li><strong>255.255.255.0</strong> : masque de sous-réseau (<em>soit 254 IP utilisables</em>)</li>
-</ul>
-<pre><code class="language-yaml">range 192.168.1.100 192.168.1.200;
-</code></pre>
-<ul>
-<li>Définit la plage d’adresses IP que le serveur DHCP peut attribuer automatiquement.</li>
-<li>Ici, les clients recevront une IP entre <strong>192.168.1.100</strong> et <strong>192.168.1.200</strong>.</li>
-<li>Les adresses en dehors de cette plage (<em>ex. 192.168.1.2 à 192.168.1.99</em>) peuvent être réservées pour des serveurs ou appareils fixes.</li>
-</ul>
-<pre><code class="language-yaml">option routers 192.168.1.1;
-</code></pre>
-<ul>
-<li>Définit la passerelle par défaut que le serveur DHCP. </li>
-<li>Ici, tous les appareils recevront <strong>192.168.1.1</strong> comme routeur pour accéder à d’autres réseaux ou à Internet.</li>
-</ul>
+<h2 id="2-lancement-de-conteneurs">2. Lancement de conteneurs</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Commande</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Exemple</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker run &lt;image&gt;</code></td>
+<td>Lance un conteneur simple</td>
+<td><code>docker run hello-world</code></td>
+</tr>
+<tr>
+<td><code>docker run -it &lt;image&gt;</code></td>
+<td>Lance un conteneur interactif (terminal)</td>
+<td><code>docker run -it ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker run -d &lt;image&gt;</code></td>
+<td>Lance un conteneur en arrière-plan (daemon)</td>
+<td><code>docker run -d nginx</code></td>
+</tr>
+<tr>
+<td><code>docker run --name &lt;nom&gt;</code></td>
+<td>Donne un nom au conteneur</td>
+<td><code>docker run --name mon_ubuntu -it ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker exec -it &lt;nom&gt;</code></td>
+<td>Ouvre un shell dans un conteneur en cours</td>
+<td><code>docker exec -it mon_ubuntu bash</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="6-configuration-de-linterface-reseau">6. Configuration de l'interface réseau</h2>
-<pre><code class="language-yaml">nano /etc/default/isc-dhcp-server
-</code></pre>
-<p>Dans <code>INTERFACESv4=""</code>, renseigne le nom de ton interface réseau.
-Pour connaître le nom exact, utilise la commande : <code>ip a</code>.</p>
+<h2 id="3-gestion-des-conteneurs">3. Gestion des conteneurs</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Commande</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Exemple</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker ps</code></td>
+<td>Liste les conteneurs actifs</td>
+<td><code>docker ps</code></td>
+</tr>
+<tr>
+<td><code>docker ps -a</code></td>
+<td>Liste tous les conteneurs (actifs et arrêtés)</td>
+<td><code>docker ps -a</code></td>
+</tr>
+<tr>
+<td><code>docker stop &lt;nom&gt;</code></td>
+<td>Arrête un conteneur en cours</td>
+<td><code>docker stop mon_ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker start &lt;nom&gt;</code></td>
+<td>Redémarre un conteneur arrêté</td>
+<td><code>docker start mon_ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker restart &lt;nom&gt;</code></td>
+<td>Redémarre un conteneur</td>
+<td><code>docker restart mon_ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker rm &lt;nom&gt;</code></td>
+<td>Supprime un conteneur</td>
+<td><code>docker rm mon_ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker rm -f &lt;nom&gt;</code></td>
+<td>Supprime un conteneur forcé</td>
+<td><code>docker rm -f mon_ubuntu</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="7-lancement-et-verification">7. Lancement et vérification</h2>
-<pre><code class="language-yaml">sudo systemctl restart isc-dhcp-server
-sudo systemctl status isc-dhcp-server
-grep dhcp /var/log/syslog
+<h2 id="4-informations-et-statistiques">4. Informations et statistiques</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Commande</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Exemple</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker info</code></td>
+<td>Informations globales sur Docker</td>
+<td><code>docker info</code></td>
+</tr>
+<tr>
+<td><code>docker version</code></td>
+<td>Affiche la version client/serveur</td>
+<td><code>docker version</code></td>
+</tr>
+<tr>
+<td><code>docker logs &lt;nom&gt;</code></td>
+<td>Affiche les logs du conteneur</td>
+<td><code>docker logs mon_ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker inspect &lt;nom&gt;</code></td>
+<td>Détails techniques (JSON) d’un conteneur</td>
+<td><code>docker inspect mon_ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker stats</code></td>
+<td>Affiche les ressources utilisées (CPU/RAM)</td>
+<td><code>docker stats</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-nettoyage-et-maintenance">5. Nettoyage et maintenance</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Commande</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Exemple</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker system prune</code></td>
+<td>Supprime tout ce qui n’est pas utilisé</td>
+<td><code>docker system prune</code></td>
+</tr>
+<tr>
+<td><code>docker image prune</code></td>
+<td>Supprime les images non utilisées</td>
+<td><code>docker image prune</code></td>
+</tr>
+<tr>
+<td><code>docker container prune</code></td>
+<td>Supprime les conteneurs stoppés</td>
+<td><code>docker container prune</code></td>
+</tr>
+<tr>
+<td><code>docker volume prune</code></td>
+<td>Supprime les volumes inutilisés</td>
+<td><code>docker volume prune</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-volumes-et-persistance">6. Volumes et persistance</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Commande</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Exemple</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker volume ls</code></td>
+<td>Liste les volumes existants</td>
+<td><code>docker volume ls</code></td>
+</tr>
+<tr>
+<td><code>docker volume create &lt;nom&gt;</code></td>
+<td>Crée un volume nommé</td>
+<td><code>docker volume create mes_donnees</code></td>
+</tr>
+<tr>
+<td><code>docker run -v &lt;volume&gt;:/chemin</code></td>
+<td>Monte un volume dans un conteneur</td>
+<td><code>docker run -v mes_donnees:/data ubuntu</code></td>
+</tr>
+<tr>
+<td><code>docker volume rm &lt;nom&gt;</code></td>
+<td>Supprime un volume</td>
+<td><code>docker volume rm mes_donnees</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-reseaux-docker">7. Réseaux Docker</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Commande</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Exemple</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker network ls</code></td>
+<td>Liste les réseaux existants</td>
+<td><code>docker network ls</code></td>
+</tr>
+<tr>
+<td><code>docker network create &lt;nom&gt;</code></td>
+<td>Crée un nouveau réseau</td>
+<td><code>docker network create mon_reseau</code></td>
+</tr>
+<tr>
+<td><code>docker run --network &lt;nom&gt;</code></td>
+<td>Connecte un conteneur à un réseau</td>
+<td><code>docker run --network mon_reseau nginx</code></td>
+</tr>
+<tr>
+<td><code>docker network inspect &lt;nom&gt;</code></td>
+<td>Détails du réseau</td>
+<td><code>docker network inspect mon_reseau</code></td>
+</tr>
+<tr>
+<td><code>docker network rm &lt;nom&gt;</code></td>
+<td>Supprime un réseau</td>
+<td><code>docker network rm mon_reseau</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-images-et-conteneurs-en-pratique">8. Images et conteneurs en pratique</h2>
+<h3 id="creer-une-image-a-partir-dun-conteneur">Créer une image à partir d’un conteneur</h3>
+<pre><code class="language-bash">docker commit &lt;id_conteneur&gt; mon_image:1.0
 </code></pre>
-<p>💡 Astuce : pour vérifier si le serveur a bien distribué des adresses, consulte le fichier des baux DHCP :</p>
-<pre><code class="language-yaml">nano /var/lib/dhcp/dhcpd.leases
+<h3 id="exporter-importer-une-image">Exporter / Importer une image</h3>
+<pre><code class="language-bash">docker save -o mon_image.tar mon_image:1.0
+docker load -i mon_image.tar
+</code></pre>
+<p>Supprimer tout d’un coup</p>
+<pre><code>docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -q)
 </code></pre>
 
 
